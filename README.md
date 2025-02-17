@@ -60,27 +60,3 @@ yarn dev
 ```
 
 5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
-
-## 📚 Documentation
-
-For detailed documentation about the project structure and components, please refer to our documentation directory.
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🔗 Links
-
-- [Production Website](https://agentstore.app)
-- [Documentation](https://docs.agentstore.app)
-- [GitHub Repository](https://github.com/yourusername/agentstore)
-
-## 🙏 Acknowledgments
-
-- [Vercel](https://vercel.com) for the amazing AI SDK and hosting platform
-- [Supabase](https://supabase.com) for the powerful backend infrastructure
-- [OpenAI](https://openai.com) for the AI capabilities
