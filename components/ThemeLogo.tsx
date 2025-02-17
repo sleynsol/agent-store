@@ -30,7 +30,7 @@ export function ThemeLogo({ onClick }: ThemeLogoProps) {
   const isDark = resolvedTheme === 'dark';
 
   const Logo = () => (
-    <div className="relative w-[160px] h-[50px] transition-opacity hover:opacity-80">
+    <div className="relative w-[160px] h-[40px] transition-opacity hover:opacity-80">
       <Image
         src="/assets/logo.png"
         alt="Agent Shop Logo"
