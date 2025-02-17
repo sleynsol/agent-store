@@ -1,0 +1,24 @@
+{
+  "name": "agentstore",
+  "short_name": "agentstore",
+  "description": "Your AI app store - Chat with specialized AI agents",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "orientation": "portrait",
+  "categories": ["ai", "chat", "productivity"],
+  "prefer_related_applications": false
+} 
