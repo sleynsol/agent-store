@@ -6,6 +6,8 @@ import { z } from 'zod';
 import { webSearchTool } from './tools/web-search';
 import { dataPodsTool } from './tools/data-pods';
 
+export const runtime = 'edge';
+
 interface Message {
   role: 'system' | 'user' | 'assistant';
   content: string;
