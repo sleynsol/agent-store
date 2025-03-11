@@ -17,7 +17,8 @@ async function performWebSearch(query: string ) {
   try {
     const res = await tvly.search(query, {})
     console.log("web searched ", res)
-    return res
+    const response = `${res.answer}\n ${res.results}`
+    return response
   } catch(e) {
     return `No search results found for ${query}`
   }
