@@ -1,15 +1,24 @@
 import { z } from 'zod';
-import {tavily} from '@tavily/core'
 
-async function performWebSearch(query: string ) {
-  const tvly = tavily({ apiKey: process.env.TAVILY_API_KEY });
+async function performWebSearch(query: string) {
   try {
-    const res = await tvly.search(query, {})
-    console.log("web searched ", res)
-    const response = `${res.answer}\n ${res.results}`
-    return response
-  } catch(e) {
-    return `No search results found for ${query}`
+    // Use absolute URL for Edge Function compatibility
+    const response = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/web-search`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ query }),
+    });
+
+    if (!response.ok) {
+      throw new Error('Web search failed');
+    }
+
+    const data = await response.json();
+    return data.result;
+  } catch (e) {
+    return `No search results found for ${query}`;
   }
 }
 
