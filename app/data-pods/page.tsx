@@ -356,7 +356,6 @@ export default function DataPodsPage() {
         <div className="mt-8 p-4 rounded-lg bg-muted/50">
           <h2 className="text-lg font-semibold mb-2">Instructions</h2>
           <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground">
-            <li>Connect your Solana wallet to enable file upload</li>
             <li>Drag and drop or click to select a file</li>
             <li>Your data will be stored securely in your browser</li>
             <li>Access your data pods anytime from this page</li>

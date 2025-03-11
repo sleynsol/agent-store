@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import {tavily} from '@tavily/core'
 
 interface DuckDuckGoResponse {
   Abstract: string;
@@ -11,7 +12,18 @@ interface DuckDuckGoResponse {
   }>;
 }
 
-async function performWebSearch(query: string) {
+async function performWebSearch(query: string ) {
+  const tvly = tavily({ apiKey: process.env.TAVILY_API_KEY });
+  try {
+    const res = await tvly.search(query, {})
+    console.log("web searched ", res)
+    return res
+  } catch(e) {
+    return `No search results found for ${query}`
+  }
+}
+
+async function performWebSearch2(query: string) {
   try {
     const encodedQuery = encodeURIComponent(query);
     const response = await fetch(

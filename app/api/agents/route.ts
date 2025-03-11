@@ -57,7 +57,8 @@ export async function POST(request: Request) {
           flames: 0,
           creatorWallet: creator,
           isPublic: isPublic,
-          tools: tools
+          tools: tools,
+          type: 'intern'
         }
       ])
       .select()
